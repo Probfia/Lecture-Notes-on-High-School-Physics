@@ -1,0 +1,1034 @@
+\documentclass[a4paper,9pt]{ctexart}
+
+\input{comd.tex}
+
+\title{高中物理讲义}
+\author{高寒}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{引言、质点和运动的描述}
+\subsection{高中物理的研究对象}
+\emph{目前来看，你觉得高中物理都讲了些什么？研究什么问题？未来可能继续学习什么内容？}
+\begin{itemize}
+\item
+如果要理一条主线，高中物理主要是讲\info{质点}在各种\info{力}的作用下如何\info{运动}，也就是质点牛顿第二定律的应用。
+\item
+全国卷高考物理有2道大题，一般都围绕这个话题展开。一般一道题涉及电、另一题为纯力学，且喜欢考直线运动（e.g. 木板滑块模型） \so 高一上的知识点是整个高中物理的基础，也是高考的重点。
+\end{itemize}
+\emph{怎么学习？}
+\begin{itemize}
+\item
+多阅读教材，熟悉基本\info{概念}：了解概念背后的\info{数学工具}，熟悉定律定理对应的典型物理\info{现象}；
+\item
+多想一些实际例子，建立清晰的物理图像 \so 对题目能够很清晰地想清楚物理过程，这对高考的物理综合大题非常重要！
+\end{itemize}
+\subsection{质点}
+\emph{怎么理解质点？}
+\begin{itemize}
+\item
+不妨把我们的问题放大一点，看看怎么理解物理中的各种模型。
+\item
+质点可以理解成数学中的点，它的唯一属性是质量$m$（未来还会引入电荷$q$）。\so 高度抽象化和理想化。
+\item
+如果题目没有说，质点\info{不会碎}；在高中阶段，所有的质点都\info{不会转}。
+\begin{itemize}
+\item
+不会碎：质点永远只是一个点，就像小时候玩的弹珠：只要不用太大的力，它永远都是一个坚硬的球体。（著名段子：坚不可摧的小滑块）
+\item
+不会转：质点不会自己转动。高中阶段不考虑转动。下面的问题具有启发性：
+\end{itemize}
+\end{itemize}
+\begin{eg}
+一个玻璃弹珠从倾角为$\theta$的斜面下滚下，其加速度大小是多少？是$g\sin \theta$吗？
+\end{eg}
+\begin{ans}
+答案不是著名的$g\sin \theta$。因为弹珠是从斜面上滚下而不是滑下，它会越滚越快从而消耗一部分重力势能，使得加速度小于$g\sin \theta$。真实的答案是$a=\frac{5}{7}g\sin \theta$。（怎么得到这个答案的？超纲啦，别管）
+\end{ans}
+如果考虑的是小滑块，那么加速度就是$g\sin \theta$。 \so 高中物理不考虑质点的转动！
+\begin{itemize}
+\item
+因此，老生常谈的例题：研究地球绕太阳转的时候，可以把地球当初质点；研究地球自转的时候就不行。
+\end{itemize}
+物理中的其他模型也是这样高度抽象化的，当然，考虑清楚什么时候这种抽象是合理的是一种重要的，需要慢慢培养的能力。来看另外一个抽象的例子：
+\begin{eg}
+将一个质量为$2\unit{kg}$的物块靠近一个粗糙的竖直墙面后松手，请问墙面和滑块间有没有\info{摩擦力}的作用？墙面和滑块间有没有\info{力}的作用？
+\end{eg}
+\begin{ans}
+滑块对墙面没有正压力的作用 \so 由$f = \mu N$，不存在摩擦力作用。
+\par
+但有没有\info{力}的作用呢？肯定是没有了。但是比较杠的同学可能会说，任何两个物体都存在万有引力，为什么不考虑呢？
+\par
+两个物体间万有引力的公式为$F = \frac{Gm_1m_2}{r^2}$，$G$在国际单位制下大概是$6.7\times 10^{-11}$，两个相隔$0.1\unit{m}$，质量在kg量级的物体间万有引力只有$\sim 10^{-9} \unit N$。而这里我们考虑的力都在$mg \sim 10\unit{N}$的量级，因此在这种问题里我们就当万有引力不存在了。
+\end{ans}
+同样的哲学：为什么研究地球公转的时候不用考虑自转？地球半径$R_\oplus \approx 6000\unit{km}$；地日距离$r \approx 2\times 10^8 \unit{km}$，相比起来实在太小了！
+\subsection{运动的描述}
+\emph{我们已经同意了质点就是一个数学上的点，那么，怎么描述运动？}
+\begin{itemize}
+\item
+数学和物理是不可分离的整体，在学习物理时要主动借用初高中数学中学到的工具！即使高中物理老师常常回避这个问题 \so 初中的平面直角坐标系、三角函数；高中将要学到的向量和导数都是帮助理解物理概念的重要数学工具，在将来学到这些数学时要主动跟物理联系起来。
+\item
+数学上，点的位置用坐标系描述，点的坐标为$(x,y)$。高一上学期，我们考虑的问题更简单：质点只在$x$轴上运动 \so 我们只需要一个坐标$x$。
+\item
+质点的坐标$x$是时间$t$的函数，就是一个类似于抽象成$f(x)$的关系式$x(t)$ \so 如果$x(t)$的表达式已知，质点的运动也就清楚了。
+\item
+数学里函数图像是研究函数的重要工具 \so 我们也把$x(t)$做成一个图，并且物理老师给它起了一个有点可怕的名字，叫$x-t$图。
+\end{itemize}
+\begin{eg}
+以$2\unit{m/s}$的速度匀速运动的质点在$t=3\unit{s}$时位于$x=3\unit{m}$的位置，它的位置时间关系写成公式是什么样子？画成$x-t$图是什么样子呢？
+\end{eg}
+\begin{ans}
+虽然这是一个很简单的问题，但是请在下面自己写写吧：
+\vspace{5cm}
+\end{ans}
+
+
+
+\subsection{速度和加速度}
+\emph{为什么匀速直线运动的平均速度就等于瞬时速度？}
+\begin{itemize}
+\item
+质点在$(t,t+\Delta t)$时间段里的\info{平均速度}定义为
+\beq
+\bar v = \frac{x(t+\Delta t) - x(t)}{\Delta t}
+\eeq
+而质点在$t$时刻的\info{瞬时速度}就是令$\Delta t \to 0$的$\bar v$。
+\begin{itemize}
+\item
+平均速度对一个时间段定义，而瞬时速度对一个时间点定义。
+\item
+令$\Delta t \to 0$得到瞬时速度的操作也可以对任意的数学函数$f(x)$做，它在数学上叫做求导数，我们会在高二下学期的数学课上学习到这种操作和导数的具体计算，从而更好地回来理解这一块知识点。不过我们可以看一个简单的例子体验一下：
+\begin{eg}
+如果一个质点的运动规律是$x = t^2 + 3$，求它在$(2\unit{s},2\unit s + \Delta t)$时间段内的平均速度和$2\unit s$时的瞬时速度。
+\end{eg}
+\begin{ans}
+按定义
+\beq
+\bar v = \frac{(2+ \Delta t)^2 + 3 - (2^2 + 3)}{\Delta t} = \frac{4 + 4\Delta t + \Delta t^2 - 4}{\Delta t} = 4 + \Delta t
+\eeq
+从而再让$\Delta t$趋于零得到$t=2\unit s$的瞬时速度$v = 4\unit{m/s}$。
+\end{ans}
+\item
+对应在$x-t$图上，在$t$时刻质点的瞬时速度就是$x-t$曲线在那一点处的斜率（画个图在下面解释一下).
+\vspace{5cm}
+\end{itemize}
+现在你应该能回答我们开头提出的问题了！
+\vspace{5cm}
+\item
+把上面的所有$x$改成$v$；$v$改成$a$就是平均加速度和瞬时加速度的定义。
+\begin{itemize}
+\item
+速度$v$衡量位置$x$的变换快慢；而$a$就相应地衡量$v$的变换快慢。
+\item
+就像某时刻的速度$v$和位置$x$毫无关系一样，某时刻的$a$也和$v$毫无关系（e.g. 刚点火的火箭具有巨大的$a$，而$v$几乎为0；在高空巡航的客机有很大的$v$，而$a$几乎为0）。
+\item
+学完高一上学期应该很清楚了：为什么研究加速度？因为它出现在我们的中心定律$F=ma$的右端！
+\item
+对$x = \frac{1}{2}at^2 + v_0 t$做一次“求导数”操作得到$v(t)$函数；再对$v(t)$函数做一次“求导数”操作可以得到加速度$a$，从而可以自己验证这个公式的正确性。感兴趣就自己动手试试吧！
+\end{itemize}
+\item
+研究这种问题的一个更加powerful的工具就是$v-t$图，它就是函数关系$v(t)$的函数图像。
+\begin{itemize}
+\item
+中心结论：$v-t$曲线和$t$轴围成的面积是质点在这段时间内的位移$\Delta x$；$v-t$曲线在某点处的斜率是质点在这个时刻的速度。
+\item
+上面两个东西都区分正负：如果曲线在$t$轴下方，则围成面积为负，位移也为负（为什么？曲线在$t$轴下方 \so $v<0$ \so 质点朝$-x$方向运动）；如果斜率为负，加速度$a$就为负（为什么？斜率为负表示速度在减小）。
+\item
+斜率为0的点，质点速度达到最大或最小值。
+\item
+看\cref{vtdiagram}...
+\cpicn{0.8}{vtdiagram}{一个典型的$v-t$图}
+\item
+$v-t$曲线为倾斜直线 \so 斜率为常数 \so $a$为常数 \so 质点做匀加速直线运动 （ 曲线就一定是变加速！）
+\end{itemize}
+\end{itemize}
+下面一个题有一定难度，不过如果你能理清这例题，你就能理清$v-t$图这一节的所有概念！
+\begin{eg}
+质点的运动规律是$x = 2\sin  t\  ({\rm m})$，如\cref{sinecurve}，试大概画出对应的$v-t$图，并指出质点的加速度什么时候达到最大？质点的位置什么时候达到最大？对于这个运动你还能说出一些什么特征？
+\cpicn{0.6}{sinecurve}{$x = 2\sin  t ({\rm m})$对应的$x-t$图}
+\end{eg}
+\begin{ans}
+自己动手做一做！
+\vspace{8cm}
+\end{ans}
+
+
+
+
+
+\newpage
+\section{匀加速直线运动的规律}
+我们上一讲的末尾介绍了高中物理大杀器$v-t$图。这一节我们来小试牛刀，用它来复习一下匀加速直线运动。
+\subsection{速度时间关系}
+\emph{匀加速直线运动的规律那么多条，怎么记住？}
+\begin{itemize}
+\item
+答案是，你只用记一条：
+\beq
+v = at + v_0
+\eeq
+\emph{说一说上面这个公式里每个参数的物理意义？}
+\end{itemize}
+\subsection{位移时间关系和位移速度关系}
+\emph{后面那么多怎么办呢？}
+\begin{itemize}
+\item
+先画出$v = at + v_0$对应的$v-t$图。利用规律“$v-t$图和$t$轴围成的面积就是质点的位移“，得到
+\beq
+x = \frac{1}{2}at^2 + v_0 t
+\eeq
+\item
+怎么用$v-t$图推出速度位移关系？看\cref{vxrel}。
+\cpicn{0.8}{vxrel}{用$v-t$图得到速度位移关系}
+\emph{提示够多啦，请自己写出完整的推导过程。}
+\vspace{4cm}
+\end{itemize}
+\begin{eg}
+解释公式$\Delta s = aT^2$的中各个符号的物理含义，在一个$v-t$图上画出各个物理量并用$v-t$图证明之。
+\end{eg}
+\begin{ans}
+自己动手做一做！
+\vspace{6cm}
+\end{ans}
+
+\emph{老师好无聊，为什么非要用$v-t$图这种东西研究？}\par
+可视：容易建立清晰的物理图像。在力学大题中一般涉及多个过程\so $v-t$图可以更方便地研究相对运动趋势；判断摩擦力方向等，因此最好从最基本的物理开始就熟悉运用$v-t$图这种工具！
+\subsection{追击问题}
+\begin{itemize}
+\item
+追击问题的最有效解决工具就是$x = \frac{1}{2}at^2 + v_0t + x_0$，然后就可以转换成初中二次函数求最值问题无脑做了。
+\item
+不过也要理清楚物理图像，比如问一下自己，为什么两者速度相等时相距最大/最小？和你直接用二次函数求最值的方法一致吗？
+\end{itemize}
+\begin{eg}
+静止的警车发现前方$100\unit m$处有一辆违法车辆以$72\unit{km/h}$的速度行驶，警车立即以$a = 2\unit{m/s^2}$的恒定加速度追赶。由于当天大雾，当两车相距$240\unit{m}$后便会失去视野而无法再跟踪车辆。请问警车能否追上违法车辆？
+\end{eg}
+\begin{ans}
+以警车为原点建立一维坐标系$Ox$，警车的速度-时间关系写为
+\beq
+x_1 = t^2
+\eeq
+犯罪车辆的速度-时间关系为
+\beq
+x_2 = 20t + 100
+\eeq
+两者的距离差为
+\beq
+s = x_2 - x_1 = -t^2 + 20t + 100
+\eeq
+根据数学中的二次函数知识，当$t = \frac{20}{2}\unit s = 10 \unit s$时，$s$有最大值$-10^2 + 200 + 100 = 200({\rm m})$，小于240 m。此后警车开始靠近违法车辆，故可以追上。
+\end{ans}
+\subsection{其他习题}
+\begin{itemize}
+\item
+其他习题主要涉及匀加速直线运动的复杂计算和读$v-t$图。主要运用的工具还是$v-t$图，它能很好地帮你看清问题。
+\item
+灵活运用$v^2 - v^2_0 = 2ax$和$\Delta s = aT^2$有时可以很大地减小计算量。
+\end{itemize}
+\begin{eg}
+坐标轴上有原点$O$和三点$ABC$，其中$AB = s_1, BC = s_2$。一静止质点在$t=0$时刻开始从原点做匀加速直线运动，通过$AB$段和通过$BC$段的时间相等，求$OA$长度。
+\end{eg}
+\begin{ans}
+画出$v-t$图：
+\vspace{4cm}
+\\
+假设相等的时间是$T$，则加速度为$a = $\hspace{1cm}，且$B$点速度为$v_B = $\hspace{1cm}，最后在$v-t$图上补完所有可以推得的物理量求得$OA=$\hspace{3cm}。
+\end{ans}
+
+
+
+
+
+\newpage
+
+\section{静力平衡}
+\subsection{矢量合成和正交分解}
+\emph{什么是矢量？力和速度是矢量吗？电流是矢量吗？}
+\begin{itemize}
+\item
+矢量有大小和方向，还必须符合平行四边形定则（或三角形定则，更常用）。
+\item
+数学上的向量：在坐标系中表示成一个数组$\vec a = (a_x,a_y)$ \so 物理上的jargon：矢量的正交分解（i.e. 正交=两个垂直方向）。
+\item
+常用的正交分解方案：遇到斜面沿斜面；其他问题沿竖直和水平方向。
+\item
+合力和分力：等效替代的思想。
+\item
+平衡条件：系统内各个质点受到的合外力在$x,y$两个方向上都为0
+\bea
+F_{1x} + F_{2x} + \dots F_{nx} &= 0 \\
+F_{1y} + F_{2y} + \dots F_{ny} &= 0
+\eea
+区分方向：正交分解后，沿$x$正方向的力写正号；负方向写负号（和速度一样）。
+\end{itemize}
+\begin{eg}
+若质点在$n$个力的作用下平衡，则力$F_1,\dots, F_{n-1}$的合力$F_t$和$F_n$的关系是什么？
+\end{eg}
+\begin{ans}
+自己试一试！如果一下想不出来，先考虑$n=2,3$的情况...
+\vspace{2cm}
+\end{ans}
+\begin{itemize}
+\item
+受力分析：整体法与隔离法。结合生活实际经验，先定性分析想清楚图像！顺序：重力$\to$弹力$\to$摩擦力（为什么有这个顺序？）
+\item
+\emph{整体法的物理依据是什么？}
+\end{itemize}
+\subsection{常见力的特征}
+\emph{杆和绳有什么区别？}
+\begin{itemize}
+\item
+重力：竖直向下，正比于质量（生活常识）
+\beq
+G = mg
+\eeq
+质量和重量的区别：日常生活中不区分，物理上？\so 质量用$m = F/a$定义；重量是在地球表面测到的$mg$值 \so 在月球表面，因为月球的$g$大概是地球的$1/6$，同样的物体重量也变成原来的$1/6$，但是质量不变。
+\item
+弹力：与形变方向相反，大小正比于形变量：$F = kx$。\so \info{硬}杆是什么意思？$k \to \infty$使得形变可以忽略不计，提供任意的弹力。
+\item
+摩擦力
+\begin{itemize}
+\item
+不管是静摩擦力还是滑动摩擦力，总是阻碍相对运动（趋势）：不准离开我
+\item
+静摩擦力：有一个最大值，一般题目不明说可以认为近似等于滑动摩擦力$f = \mu N$。 \so 如果没有沿表面的压力$N$，任何情况下也不会有静摩擦力。
+\item
+滑动摩擦力：$f = \mu N$，只取决于这两个因素！
+\end{itemize}
+高二开始会学习简单的电场力和磁场力，不过也万变不离其中。
+\end{itemize}
+\subsection{典型习题}
+\begin{itemize}
+\item
+斜面滑块问题：
+\end{itemize}
+\begin{eg}
+固定斜面上放置一个物块，认为最大静摩擦力等于滑动摩擦力，摩擦系数为$\mu$，倾角为$\alpha$。如果物块能够沿斜面滑下，$\mu$和$\alpha$之间应该满足？
+\end{eg}
+\begin{ans}
+思路：定性分析：生活经验，$\theta$越大，$\mu$越小，越容易滑下。\par
+做法：正交分解，最大滑动摩擦力等于\hspace{4cm}，
+\vspace{5cm}
+\end{ans}
+\begin{itemize}
+\item
+自锁问题：
+\end{itemize}
+\begin{eg}
+拖把和地面的摩擦系数为$\mu$，拖把自重不计。拖把杆与地面夹角至少为多大时，无论使多大的力都无法推动拖把？
+\end{eg}
+\begin{ans}
+思路：定性分析：生活经验，$\theta = 90^\circ$时，肯定没法推动；$\theta = 0^\circ$时，一点点力就可以推动（为什么？）\so $\theta$越大，越难推动。\par
+做法：正交分解，最大滑动摩擦力大于\hspace{4cm}，人施加的水平方向分力（动力）等于\hspace{4cm}。要推动，动力要大于\hspace{4cm}。从而列出等式...
+\vspace{5cm}
+\end{ans}
+\emph{如果考虑拖把自重呢？刚才的定性分析不会有太大变化，具体计算？试一试！（如何快速检查你的结果？和上题比较，取极限...}
+\vspace{7cm}
+\begin{itemize}
+\item
+摩擦力叠叠乐：先整体再隔离的一般思路。
+\end{itemize}
+
+\newpage
+\section{牛顿第二定律}
+\subsection{牛顿第二定律的理解}
+\begin{itemize}
+\item
+牛顿第二定律是连接运动学和力学的桥梁
+\beq
+F = ma
+\eeq
+\item
+定量地定义了惯性（惯性=质量）：质量是物体被外力改变运动状态的难易程度。
+\item
+矢量等式：$\vec F = m\vec a$，在平面内找两个正交方向$x,y$，实际上牛顿第二定律是两个方程：
+\bea
+F_x &= ma_x \\
+F_y &= ma_y
+\eea
+\item
+牛顿第二定律是一个\info{方程}，也就是等号两边描述的是不同的对象。 \so 绝不能把加速度和力混为一谈。 \so 运用牛顿第二定律解题时，\info{坚持左边写合外力、右边写加速度的原则！}。
+\end{itemize}
+
+\subsection{整体法与隔离法}
+\begin{itemize}
+\item
+牛顿第二定律具有\info{可加性}：假设有两个物体$A,B$，分别受到外力$\vec F_A,\vec F_B$，加速度为$\vec a_A,\vec a_B$，且存在相互作用力：$A$对$B$为$\vec F_{AB}$，$B$对$A$为$\vec F_{BA}$。 \so 分别列出各自的牛顿第二定律
+\bea
+\vec F_A + \vec F_{BA} &= m_A \vec a_A \\
+\vec F_B + \vec F_{AB} &= m_B \vec a_B
+\eea
+\so 两式相加，牛顿第三定律保证了$\vec F_{AB} + \vec F_{BA} = 0$ \so 
+\beq
+\vec F_A + \vec F_B = m_A \vec a_A + m_B \vec a_B
+\eeq
+\item
+物理诠释：将$A,B$打包成一个整体系统，系统受的总合外力等于系统内部的所有$m\vec a$相加。 \so \info{整体法}的物理依据。
+\end{itemize}
+\begin{eg}
+两个用弹簧连接的物块在空中自由下落，上方物块的质量为$m_1 = 2\unit{kg}$，下方物块的质量为$m_2 = 1\unit{kg}$，某一时刻测得上方物块向下掉落的加速度为$8\unit{m/s^2}$，求下方物块此时的加速度和弹簧的弹力。指明弹簧此时是压缩还是拉伸。
+\end{eg}
+\begin{ans}
+先整体法：打包成整体，只受重力。\so 列出等式
+\beq
+(m_1+m_2) g = m_1 a_1 + m_2 a_2
+\eeq
+\so $a_2 = $\hspace{2cm}。
+\par
+再对随意一个物块单独分析：请自己完成这部分。
+\vspace{3cm}
+\end{ans}
+
+\begin{eg}
+一个倾角为$\theta$的粗糙斜面固定在水平面上，其上放置一个质量为$m$的物块，物块以$a$的加速度下滑，地面对斜面的支持力是多大？朝什么方向？地面对斜面的摩擦力力是多大？朝什么方向？
+\end{eg}
+\begin{ans}
+正交分解后在水平和竖直方向上分别列整体法的等式：
+\vspace{6cm}
+\end{ans}
+
+\subsection{量纲分析}
+\emph{为什么初中教$g = 9.8\unit{N/kg}$，高中教$g = 9.8\unit{m/s^2}$？}
+\begin{itemize}
+\item
+物理的等式不仅是数的等式，更是量的等式 \so 带单位计算，等式左右两边必须是同类单位
+\end{itemize}
+\begin{eg}
+判断以下表达式是否可能正确。
+\begin{enumerate}
+\item
+$s = v^2/t$
+\item
+$v = s_1 s_2/t$
+\end{enumerate}
+\end{eg}
+\begin{ans}
+第一个等式左边单位为${\rm m}$，右边为${\rm m^2/s^3}$，非同类单位，不可能正确。
+第二个
+\end{ans}
+\begin{itemize}
+\item
+牛顿第二定律给出了力的单位：$1 \unit N = 1\unit{kg\cdot m/s^2}$。
+\item
+量纲分析：高中力学只有3个基本单位${\rm m,s,kg}$，其他单位，如牛顿${\rm N}$，焦耳${\rm J}$都可以写成这三个基本单位的乘积。 \so 用单位来排除选择题错误答案，快速检查自己计算题结果。
+\end{itemize}
+\begin{eg}
+单摆的周期（摆动一个往返的时间）$T$可能和摆长$l$，重力加速度$g$以及摆的质量$m$有关，下面哪个可能是$T$的正确公式？\\
+\ooptlist{$T = 2\pi \frac{l}{g}$}{$T = 2\pi \frac{l}{\sqrt{mg}}$}{$T = 2\pi \frac{mg}{l}$}{$T = 2\pi \sqrt{\frac{l}{g}}$}
+\end{eg}
+\begin{ans}
+自己试试，算出各选项右边表达式对应的单位。
+\vspace{5cm}
+\end{ans}
+
+
+
+\newpage
+\section{多过程的牛顿第二定律分析}
+\emph{应用牛顿第二定律的关键是求出各物体在各阶段的加速度，再用$v-t$图分析运动。}
+\subsection{单物体的多过程分析：斜面-平面模型}
+\begin{itemize}
+\item
+从斜面上滑下再停止：对每个过程分别列出牛顿第二定律后算出每个过程的加速度，用$v-t$图分析。
+\end{itemize}
+\begin{eg} \label{egslope}
+如\cref{slope}，$m=0.5\unit{kg}$的质点从距斜面低端$L = 25\unit m$的地方滑下，斜面的倾角为$\theta = 37^\circ$，质点与斜面的动摩擦因数为$\mu_1 = 0.5$，与水平地面的动摩擦因数为$\mu_2 = 0.4$，求质点运动的总时间。
+\end{eg}
+\cpicn{0.6}{slope}{斜面-平面模型}
+\begin{ans}
+受力分析：在斜面上，质点受到重力$mg$、斜面对质点的支持力$N$和斜面对质点的摩擦力$f = \mu_1 N$，在垂直斜面方向列出牛顿第二定律
+\beq
+mg\cos \theta - N = 0
+\eeq
+在平行斜面方向列出牛顿第二定律
+\beq
+mg\sin \theta - f = ma_1
+\eeq
+从中解得$a_1 =$
+\par
+在水平面上，在竖直和水平方向分解，质点的加速度为$a_2 = \mu_2 g = 4\unit{m/s^2}$，方向向左。
+\par
+质点将在水平面上一直减速运动直到停止，画出过程的$v-t$图，算出关键点的坐标
+\vspace{6cm}
+\end{ans}
+思考：\emph{给定$m = 0.5\unit{kg}$是多余条件吗？量纲分析的角度...}
+\begin{itemize}
+\item
+如果水平面变成传送带，如何处理？摩擦减速过程结束=质点静止=质点和水平面速度相等（都为0）\so 在传送带上：摩擦减速过程结束=质点和传送带速度相等。（生活经验：安检传送带）
+\end{itemize}
+\begin{eg}
+其他条件不变，将上面例题里的地面换成以$v_0 = 2\unit{m/s}$向右运行的传送带，其他条件不变，怎么解决？
+\end{eg}
+\begin{ans}
+牛顿第二定律求加速度的部分不会变化，唯一变化的是...
+\vspace{6cm}
+\end{ans}
+\begin{itemize}
+\item
+如果物体初速度不为零，需要分成几个过程分析？
+\end{itemize}
+\begin{eg}
+\cref{egslope}中其他条件不变，但质点一开始有沿斜面向上的初速度$v_0 = 5\unit{m/s}$。
+\end{eg}
+\begin{ans}
+（质点向上运动和下滑过程中摩擦力一样吗？）
+\vspace{8cm}
+\end{ans}
+
+
+\subsection{多物体的多过程分析：物块-木板模型}
+\begin{itemize}
+\item
+两物体画在同一个$v-t$图上 \so 两条线夹成的面积=相对位移（为什么？两个角度证实）
+\item
+$v-t$图判断共速时的时间和速度、共速前的位移 \so 是否会掉下木板
+\end{itemize}
+\begin{eg} \label{egcom}
+如\cref{comoving}，光滑水平面上有一个质量为$M = 2\unit{kg}$的无限长木板，另有一质量为$m = 1\unit{kg}$的木块以$v_0 = 6\unit{m/s}$的速度从左端冲上木板，它们随即开始向右运动。木板和木块之间的动摩擦因数为$0.4$。求两者的最终速度和木块在木板上划过的长度。
+\end{eg}
+\cpicn{0.6}{comoving}{物块-木板模型}
+\begin{ans}
+对物块应用牛顿第二定律：
+\par
+对木板应用牛顿第二定律：
+\par
+画出$v-t$图，两线的交点表明木板和物块达到相对静止，不再相对滑动。从图中读出此时的时间为$t_c = $\hspace{2cm}，速度为$v_c =$\hspace{2cm}。围成的面积为相对位移，为$\Delta x =$\hspace{2cm}。
+\vspace{4cm}
+\end{ans}
+\begin{itemize}
+\item
+如果水平面光滑，则有$mv_0 = (m+M)v_c$（计算验证一下） \so 动量守恒定律的体现
+
+\item
+如果有外力牵引或地面对木板有摩擦：共速后整体法分析得到加速度$a_c$，判断$a_c$和$\mu g$的相对大小 \so $a_c>\mu g$，不能一起运动，需要继续用隔离法分析。
+\end{itemize}
+
+\begin{eg}
+\cref{egcom}中的其他条件不变，但
+\begin{enumerate}
+\item
+光滑水平面改成$\mu = 0.1$的粗糙水平面；
+\item
+光滑水平面改成$\mu = 0.8$的粗糙水平面；
+\item
+水平面光滑，但有水平向右的恒力$F = 18\unit{N}$作用在木板上。木板长度有限，为$L = 6.6\unit m$。求物块在木板上运动的总时间
+\end{enumerate}
+求两者的最终速度和木块在木板上划过的长度；并求物块最终停在木板上的位置。
+\end{eg}
+\begin{ans}
+（记得讨论最终能不能共同运动）
+\vspace{8cm}
+\end{ans}
+
+
+
+
+\newpage
+\section{能量和动量}
+\subsection{功和势能}
+\emph{初中的时候为什么引入功的概念？}
+\begin{itemize}
+\item
+\info{功是能量转换的量度}：e.g. 电做了多少功=多少电能转换成了其他的能量。
+\item
+人把重物往上提：人消耗自己干饭获得的能量增加重物的势能 \so 生活经验：越重、举得越高，消耗能量越大 \so 转换的能量=功=$Fs$。
+\item
+力$\vec F$，位移$\vec s$都是矢量 \so $W = \vec F \cdot \vec s = Fs \cos \theta$。\so 垂直于物体运动方向不做功，于运动方向相反的力做负功。
+\item
+合力（矢量和）做功=各分力做功之和（代数和）
+\item
+重物向上提，重力势能增大。同时，重力向下，位移向上，重力做负功 \so 什么力做负功，什么力对应的能量就增大。
+\item
+滑动摩擦力方向和位移相反 \so 摩擦力做负功，热能（内能）增加。
+\item
+不是所有力都有势能：高中范围内，只有重力（引力）、弹力和电场力有相应的势能。
+\end{itemize}
+\emph{势能的表达式是什么？}
+\begin{itemize}
+\item
+重力做了多少负功=重力势能增大了多少 \so 取地面为参考平面（高度$h = 0$），$E_g = -(-mg)\cdot h = mgh$。
+\item
+弹性势能的表达式是什么呢？力$F$随$x$变化...和$v-t$图下的面积为位移一样的思想 \so $E_e = \frac{1}{2}kx^2$。（不要求，从量纲分析的角度能知道$E\propto kx^2$）
+\end{itemize}
+
+\subsection{动能和动能定理}
+\begin{itemize}
+\item
+公式$v^2_2 - v_1^2 = 2as$两边同乘$\frac{1}{2}m$ \so 
+\beq
+\frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2 = Fs
+\eeq
+\item
+等式右边是功，暗示左边是某种能量 \so 定义动能$E_k = \frac{1}{2}mv^2$。
+\item
+动能定理：合外力所做的功等于物体动能的变化量。（对任意运动都成立）
+\end{itemize}
+
+\subsection{机械能守恒定律}
+\begin{itemize}
+\item
+只有重力做功的动能定理：物体从高度$h_1$运动到$h_2$
+\beq
+\frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2 = (-mg)(h_2-h_1)
+\eeq
+\so
+\beq
+\frac{1}{2}mv_1^2 + mgh_1 = \frac{1}{2}mv_2^2  + mgh_2
+\eeq
+\item
+物理意义：只有重力做功时，动能+势能等于常数
+\item
+推广到有弹力的情况和多个物体组成的系统\so 定义机械能=动能+势能 \so \info{只有重力和弹力做功（无摩擦力）时，物体（系统）的机械能守恒}。【机械能守恒定律】
+\item
+再推广：能量守恒定律
+\end{itemize}
+\emph{为什么初中的时候告诉我们使用机械只能省力不能省功？}
+
+\subsection{动量定理和动量守恒}
+\emph{由$v^2_2 - v_1^2 = 2as$可以得到动能定理，那由另一个相似的公式$v_2 - v_1 = a\Delta t$可以得到什么类似的结论？}
+\begin{itemize}
+\item
+$v_2 - v_1 = a\Delta t$ 两边同乘质量$m$ \so $mv_2 - mv_1 = F \Delta t$ \so 定义动量$p = mv$，冲量$I = F\Delta t$
+\item
+动量定理：
+\beq
+I = \Delta p
+\eeq
+\item
+是矢量等式！
+\item
+动量定理和动能定理都是牛顿第二定律的推论，不是独立的。
+\end{itemize}
+\begin{eg}
+一个质量为$m = 0.1\unit{kg}$的小球以$v = 100\unit{m/s}$的速度垂直地砸向一个弹性墙壁，在$0.2\unit{s}$后被以原速度大小弹回，求弹性墙壁形变最大时的弹性势能和墙壁受到的平均冲力大小。
+\end{eg}
+\begin{ans}
+形变最大时，小球不再深入墙壁，所有动能转换为弹性势能
+\beq
+E_{p,max} = \frac{1}{2}mv^2 = 500\unit J
+\eeq
+由动量定理，冲力为
+\beq
+F = \frac{\Delta p}{\Delta t} = \frac{mv - (-mv)}{\Delta t} = 100\unit N
+\eeq
+\end{ans}
+\emph{机械能守恒的动量类比是什么}
+\begin{itemize}
+\item
+两个物体$A,B$组成的系统，若系统不受外力而只存在内力：分别写出动量定理
+\bea
+\Delta \vec p_A &= \vec F_{BA} \Delta t \\
+\Delta \vec p_B &= \vec F_{AB} \Delta t
+\eea
+牛顿第三定律保证$\vec F_{BA} +  \vec F_{AB} = 0$ \so $\Delta (\vec p_A + \vec p_B) = 0$ \so \info{不受合外力的系统动量不变}【动量守恒定律】
+\item
+动量守恒和机械能守恒的适用范围区别：动量守恒无外力（可以有内部的摩擦力）；机械能守恒无摩擦力（可以有外部的重力）
+\item
+jargon：弹性碰撞=碰撞前后总机械能不变
+\end{itemize}
+\begin{eg}
+如\cref{bullet}。一个质量为$M$的沙袋用绳悬挂在空中，一个质量为$m$的子弹以$V$的速度水平打入沙袋后和沙袋一起运动，求沙袋上升的最大高度。有多少能量转化成了热能？ 
+\end{eg}
+\cpicn{0.6}{bullet}{子弹和沙袋}
+\begin{ans}
+子弹和沙袋组成的系统在子弹打入的瞬间不受合外力作用，满足动量守恒
+\beq
+mV = (m+M)v
+\eeq
+其中$v$是子弹打入后瞬间沙袋的速度。此后两者相对静止，无摩擦耗散，由机械能守恒由
+\beq
+\frac{1}{2}(m+M)v^2 = (m+M)gh
+\eeq
+联立两式容易解得
+\beq
+h = \frac{(mV)^2}{2(m+M)^2g} \approx \lbk\frac{m}{M} \rbk^2\frac{V^2}{2g}
+\eeq
+\end{ans}
+\begin{itemize}
+\item
+这一题目的实际应用？测量$h$ \so 测量子弹速度！
+\end{itemize}
+
+\newpage
+\section{直线运动综合问题}
+\begin{itemize}
+\item
+原则上来说，需要用机械能解决的直线运动问题也可以全部用牛顿第二定律解决 \so 求加速度和$v-t$图是永远的重点和工具。
+\item
+2017年高考后引入了动量作为必考点 \so 有一些涉及碰撞的问题需要用动量守恒解决，并且速度可能突变（如果没有碰撞，速度不可能突变）。
+\end{itemize}
+\begin{eg} \label{15w}
+（2015全国卷2）下暴雨时，有时会发生山体滑坡或泥石流等地质灾害。某地有一倾角$\theta = 37^\circ$的山坡$C$，上面有一质量为$m$的石板$B$，其上下表面于斜坡平行；$B$上有一碎石堆$A$（含有大量泥土），$A$和$B$均处于静止状态，如\cref{15gk}所示。假设某次暴雨中，$A$浸湿雨水后总质量也为$m$（可视为质量不变的滑块），在极短时间内，$A,B$间的动摩擦因数$\mu_1$减小为$\frac{3}{8}$，$B,C$间的动摩擦因数$\mu_2$减小为$0.5$，$A,B$开始运动，此时刻为计时起点；在第$2\unit s$末，$B$的上表面突然变为光滑，$\mu_2$保持不变。已知$A$开始运动时，$A$离$B$下边缘的距离$l = 27\unit m$，$C$足够长，设最大静摩擦力等于滑动摩擦力。取$g = 10\unit{m/s^2}$，$\sin \theta = 0.6$，求
+\begin{enumerate}
+\item
+$0-2\unit s$时间内$A$和$B$的加速度大小。
+\item
+$A$在$B$上总的运动时间。
+\end{enumerate}
+\end{eg}
+\cpicn{0.25}{15gk}{\cref{15w}题图}
+\begin{ans}
+\ 
+\vspace{8cm}
+\end{ans}
+
+\begin{eg} \label{17w}
+（2017全国卷3）如\cref{17gk}，两个滑块$A$和$B$的质量分别为$m_A = 1\unit{kg}$和$m_B = 5\unit{kg}$，放在静止于水平地面上的木板的两端，两者与木板间的动摩擦因数为$\mu_1 = 0.5$；木板的质量为$m = 4\unit{kg}$，与地面间的动摩擦因数为$\mu_2 = 0.1$。某时刻$A,B$两滑块开始相对滑动，初速度大小均为$v_0 = 3\unit{m/s}$。$A,B$相遇时，$A$与木板恰好相对静止。设最大静摩擦力等于滑动摩擦力，取重力加速度大小$g=10\unit{m/s^2}$，求
+\begin{enumerate}
+\item
+$B$与木板相对静止时，木板的速度；
+\item
+$A,B$开始运动时，两者之间的距离
+\end{enumerate}
+\end{eg}
+\cpicn{0.32}{17gk}{\cref{17w}题图}
+\begin{ans}
+\ 
+\vspace{8cm}
+\end{ans}
+\begin{itemize}
+\item
+关于弹性碰撞的简单结论：
+\begin{itemize}
+\item
+弹性撞墙：速度反向（类比光的反射）；
+\item
+两个质量相等的物体弹性碰撞：交换速度。
+\end{itemize}
+\item
+其他情形：联立能量守恒（碰撞前后动能相等）和动量守恒求解。
+\end{itemize}
+\newpage
+\begin{eg}
+（2019全国卷3）静止在水平地面上的两小物块$A,B$，质量分别为$m_A = 1.0\unit{kg}, m_B = 4.0\unit{kg}$；两者之间有一被压缩的微型弹簧，$A$与其右侧的竖直墙壁距离$l = 1.0\unit{m}$，如图所示。某时刻，将压缩的微型弹簧释放，使$A,B$瞬间分离，两物块获得的动能之和为$E_k = 10.0\unit J$。释放后，$A$沿着与墙壁垂直的方向向右运动。$A,B$与地面之间的动摩擦因数均为$\mu = 0.20$。重力加速度取$g = 10 \unit{m/s^2}$。$A,B$运动过程中所涉及的碰撞均为弹性碰撞且碰撞时间极短。
+\begin{enumerate}
+\item
+求弹簧释放后瞬间$A,B$速度的大小
+\item
+物块$A,B$中的哪一个先停止？该物块刚停止时$A$与$B$之间的距离是多少？
+\item
+$A,B$都停止后，$A$与$B$之间的距离是多少？
+\end{enumerate}
+\end{eg}
+\begin{ans}
+\ 
+\vspace{8cm}
+\end{ans}
+
+
+
+
+\newpage
+\section{平抛运动}
+\subsection{速度合成}
+\emph{如何描述平面内的运动？}
+\begin{itemize}
+\item
+速度是矢量\so 加法遵循平行四边形定则。
+\item
+小船过河问题：速度合成，船在静水中的速度$\vec v_b$，河水速度$\vec v_r$ \so 实际速度$\vec v = \vec v_b + \vec v_r$。如\cref{boat}。
+\cpicn{0.8}{boat}{小船过河的速度合成}
+\item
+以最短时间和最短路程过河。
+\end{itemize}
+\begin{eg}
+河两岸之间的距离为$h$，船速大小为$v_b$，方向可以自由调节；水速为$v_r$平行与河岸，求小船过河的最短时间和最短路程。
+\end{eg}
+\begin{ans}
+最短路程需要分类讨论：看合速度$\vec v$可能落在平面上的什么范围内。
+\vspace{6cm}
+\end{ans}
+
+\subsection{曲线运动}
+\emph{轨迹为曲线时，如何描述质点在某一点的速度方向？}
+\begin{itemize}
+\item
+按定义
+\beq
+\vec v = \frac{\vec r(t + \Delta t) - \vec r(t)}{\Delta t}
+\eeq
+其中$\vec r(t)$是质点在$t$时刻的位置，如\cref{posvec}。
+\cpicn{0.5}{posvec}{质点的位置可以用一个矢量$\vec r = (x,y)$描述，$x,y$都是$t$的函数}
+\item
+$\Delta t$越小，越接近切线 \so 瞬时速度沿曲线切线方向，如\cref{tvec}。
+\cpicn{0.5}{tvec}{速度方向是曲线某点的切线方向}
+\item
+数轴图像\so 坐标系图像
+\item
+初中知识：力是改变速度的原因，$\vec F,\vec v$不共线则做曲线运动 \so 曲线运动需要力来维持，存在加速度；曲线运动速度方向在不断改变\so 曲线运动无论如何都是变速运动
+\end{itemize}
+
+\subsection{平抛运动}
+\emph{为什么二次函数的图像被称为抛物线？}
+\begin{itemize}
+\item
+如\cref{throwing}，将质点从$h$的高度以$v_0$的初速度水平抛出
+\begin{itemize}
+\item
+竖直方向受重力\so 自由落体运动 \so $y = - \frac{1}{2}gt^2 + h$；
+\item
+水平方向不受力 \so 匀速直线运动 \so $x = v_0 t$。
+\end{itemize}
+\item
+两式消去$t$：
+\beq
+y = -\frac{g}{2v_0^2}x^2 + h
+\eeq
+轨迹为一个二次函数。
+\cpicn{0.6}{throwing}{平抛运动的轨迹}
+\item
+数学上
+\beq
+\begin{cases}
+x &= v_0 t,\\
+y &= -\frac{1}{2}gt^2 + h
+\end{cases}
+\eeq
+称为参数方程。物理意义：描述质点在$t$时刻的位置。
+\item
+用$y = -\frac{1}{2}gt^2 + h$还是$y = \frac{1}{2}gt^2$取决于具体问题中所建立的$y$轴方向。
+\item
+在$t$时刻的\info{速度}为$v_x = v_0,v_y = gt$，\info{速率}为$\sqrt{v_0^2 + (gt)^2}$。
+\end{itemize}
+\begin{eg}
+轰炸机在高度为$h$的高空以$v$匀速飞行，欲摧毁一个地面目标，不计空气阻力，请问轰炸机需要在到达目标正上空前提前多少时间投弹？
+\end{eg}
+\begin{ans}
+定性分析：由于惯性需要提前投弹，高度越高提前时间越长 \so 假设需要提前的时间为$t$，满足方程
+\vspace{4cm}
+\end{ans}
+\begin{eg}
+如\cref{tos}，从倾角为$\alpha$的足够长斜面顶端以$v$的速度平抛一个质点，求其在斜面上的落点到斜面顶端的距离。
+\end{eg}
+\cpicn{0.6}{tos}{斜面平抛模型}
+\begin{ans}
+方法1：在顶端建立平面直角坐标系$xOy$，联立轨迹方程和直线方程...
+\vspace{4cm}
+\par
+方法2：利用质点在$t$时刻的位置满足$\frac{y}{x} = \tan \alpha$，有方程...
+\vspace{4cm}
+\end{ans}
+\par
+\emph{如果斜面长度是有限的，怎么分类讨论？}
+
+
+\newpage
+\section{匀速圆周运动}
+\subsection{角速度和线速度}
+\emph{怎么严格定义匀速圆周运动？}
+\begin{itemize}
+\item
+轨迹沿圆周（圆周），速率始终不变（匀速）。
+\item
+\info{线速度}为不变的速率：
+\beq
+v = \frac{\text{在$\Delta t$时间内走过的弧长}}{\Delta t} = \frac{\Delta s}{\Delta t}
+\eeq
+\item
+\info{角速度}为单位时间内走过的圆心角弧度数：
+\beq
+\omega = \frac{\text{在$\Delta t$时间内转过的弧度数}}{\Delta t} = \frac{\Delta \theta}{\Delta t}
+\eeq
+\item
+$\omega$的单位$\text{弧度}/{\rm s} ={\rm rad/s} ={\rm s^{-1}}$。
+\item
+曲线运动速度方向沿曲线切线方向 \so 匀速圆周运动速度方向沿该点切线方向。
+\item
+弧度的定义$\Delta \theta = \frac{\Delta s}{r}$ \so 
+\beq
+v = \omega r
+\eeq
+\item
+一图总结：\cref{circle}。
+\cpicn{0.5}{circle}{匀速圆周运动的速度和角速度}
+\item
+匀速圆周运动的周期=转一周所花费的时间。一周=$2\pi$ \so 
+\beq
+T = \frac{2\pi}{\omega}
+\eeq
+\end{itemize}
+\emph{如果角的单位用度（$^\circ$）而非弧度，$v = \omega r$还成立吗？}
+\begin{eg}
+如\cref{chilun}，两个齿轮的半径分别为$r_1$和$r_2$。当左边齿轮以$n_1 \text{圈/s}$的转速转动时，右边齿轮的转速是多少？
+\end{eg}
+\cpicn{0.4}{chilun}{两个贴合的齿轮}
+\begin{ans}
+分析：两个齿轮如此贴合，连接处的线速度必须相等。
+\vspace{3cm}
+\end{ans}
+\par
+思考：\emph{汽车离合器的原理是什么？}
+\subsection{向心加速度}
+\emph{匀速圆周运动是变速运动，其加速度是多大？}
+\begin{itemize}
+\item
+量纲分析的角度：$a$的单位为${\rm m/s^2}$，$a$可能取决于$\omega$和$r$ \so $a \propto \omega^2 r = \frac{v^2}{r}$
+\item
+运动学严格分析：几何学角度，相似三角形给出$\frac{\Delta s}{r} \approx \frac{\Delta l}{r} = \frac{\Delta v}{v}$ \so $\Delta v = \frac{v^2}{r} \Delta t$ \so 
+\beq
+a = \frac{v^2}{r} = \omega^2 r
+\eeq
+方向指向圆心。
+\item
+推导过程中没有用到牛顿定律 \so 向心加速度是$F=ma$的右边而非左边，$m\frac{v^2}{r}$不是力。
+\item
+向心加速度公式对非匀速圆周运动也适用，$v$是在某点的瞬时线速度（速率）。此时的向心加速度也称法向加速度$a_n$（方向指向法线方向）。
+\end{itemize}
+\begin{eg}
+水平面内一个质点被长度为$l$的绳子牵引围绕原点$O$做匀速圆周运动，质点的动能为$E_k$，求绳子对小球的拉力为多少。
+\end{eg}
+\begin{ans}
+小球做匀速圆周运动对应的向心加速度为$a_n = \frac{v^2}{r}$。由牛顿第二定律
+\beq
+F = ma_n = \frac{mv^2}{l}
+\eeq
+由根据动能的定义$E_k = \frac{1}{2}mv^2$，有
+\beq
+F = \frac{2E_k}{l}
+\eeq
+\end{ans}
+
+\begin{eg}
+如\cref{cirmove}，光滑水平面上有一个小孔和一个质量为$m$的做匀速圆周运动的质点，其圆周运动的半径为$r$。一绳连接该质点穿过小孔，连接一个质量为$M$的重物。重物在竖直方向上静止，求质点的角速度。
+\end{eg}
+\cpicn{0.4}{cirmove}{平面穿绳模型}
+\begin{ans}
+分析：经验定性判断，如果质点角速度为0，肯定会被重物拉掉下平面；如果质点运动太快，重物肯定会被拉飞 \so 存在一个合适的速度保持平衡，应该是绳上拉力刚好提供向心加速度的时候（和上面例题一样）。
+\par
+设绳上的张力为$T$，对重物运用牛顿第二定律，有
+\vspace{4cm}
+\end{ans}
+
+\begin{eg}
+如\cref{semicir}，半圆形轨道的半径为$R$，一个质量为$m$的质点以$v_0$的速度冲上轨道。
+\begin{enumerate}
+\item
+如果质点不从最高点落下，$v_0$至少为多大？
+\item
+如果质点在最高点对轨道的压力为$N$，其离开轨道后在水平面上的落点距离轨道下端多远？
+\end{enumerate}
+\end{eg}
+\cpicn{0.6}{semicir}{半圆轨道模型}
+\begin{ans}
+定性分析：如果速度较小，肯定会从最高点落下 \so 有一个合适的速度使得质点不会落下，在最高点的速度应该刚好满足重力提供向心加速度。
+\par
+从轨道最低点到最高点，设在最高点的速度为$v$，由机械能守恒定律（或动能定理）：
+\beq
+\frac{1}{2}mv_0^2 = \frac{1}{2}mv^2 + mg(2R)
+\eeq
+在最高点，由牛顿第二定律：
+\vspace{5cm}
+\end{ans}
+\subsection{离心现象}
+\emph{洗衣机甩干衣服的原理是什么？}
+\begin{itemize}
+\item
+匀速圆周运动需要时刻指向圆心的外力维持 \so 当外力突然不足（小于$\frac{mv^2}{r}$），物体远离圆心运动 \so 离心现象。
+\item
+反过来，如果指向圆心的外力突然增大 \so 靠近圆心运动。
+\item
+典型例子：洗衣机、印度飞饼...
+\end{itemize}
+\par
+思考：\emph{一个自转的圆盘需要力维持旋转吗？什么力承担了这个角色？}
+
+
+\newpage
+\section{万有引力定律}
+\subsection{万有引力}
+\emph{为什么万有引力普遍存在于物体间，却被人类忽视了几千年？}
+\begin{itemize}
+\item
+\info{据说}牛顿被苹果砸了一下，然后就想出了万有引力定律，如\cref{gravitation}。
+\cpicn{0.8}{gravitation}{高空抛物的危害性}
+\item
+既然地球和苹果之间有，那任何两个物体之间都应该有 \so 物理定律有普适性，不偏爱任何一个特殊物体。
+\item
+质量分别为$m_1$和$m_2$的物体（质点），间距$r$为质心的间距，万有引力方向指向对方，大小为
+\beq
+F = G \frac{m_1 m_2}{r^2}
+\eeq
+其中$G = 6.67\times 10^{-11}\unit{N\cdot m^2/kg^2}$（化成基本单位是什么？）。
+\item
+为什么叫$G$？ \so 引力=Gravitation
+\item
+为什么是$m_1m_2$？ \so 牛顿第三定律的要求。
+\item
+为什么正比于$\frac{1}{r^2}$？ \so 类比于一个灯泡在$r$距离的亮度（单位面积上的功率），如\cref{revsqr}。 \so 事实上因为我们生活在3维空间，所以电场力也是$\frac{1}{r^2}$的。
+\cpicn{0.6}{revsqr}{为什么是平方反比}
+\end{itemize}
+\begin{eg}
+根据万有引力定律，重力加速度$g$可以怎样用地球质量$M$和地球半径$R$，以及万有引力常数表示？怎么用地球密度$\rho$和$R$已经$G$表示？在距地球表面高度$h$的山上，重力加速度$g(h)$和地面重力加速度$g(h=0) = g$的关系是什么？
+\end{eg}
+\begin{ans}
+在地球表面，质点受到的重力就是地球对质点的万有引力。于是
+\vspace{6cm}
+\end{ans}
+
+\subsection{行星轨道和开普勒定律}
+\emph{地理知识：太阳系内行星的轨道有什么特点？}
+\begin{itemize}
+\item
+行星轨道具有近圆性，近似认为它们就是半径为$r$的圆，行星在轨道上做匀速圆周运动，角速度为$\omega$。太阳质量记为$M_\odot$。\so 牛顿第二定律，万有引力提供向心力
+\beq
+\frac{GM_\odot m}{r^2} = m\omega^2 r
+\eeq
+\item
+天文上更常用的是周期$T$（大家都知道地球绕太阳转的周期是1年，但是很少说角速度是多少），$\omega = \frac{2\pi}{T}$ \so
+\beq
+\frac{GM_\odot m}{r^2} = m\lbk \frac{2\pi}{T}\rbk^2 r
+\eeq
+\so
+\beq \label{k3}
+\frac{r^3}{T^2} = \frac{GM_\odot}{4\pi^2}
+\eeq
+右边对太阳系的所有行星都是一个常数。（开普勒第三定律）
+\item
+历史上，开普勒\info{先从天文观测数据}总结出\cref{k3}，此外还有开普勒第一和第二定律：
+\begin{enumerate}
+\item
+（第一定律）行星的轨道都是一个椭圆，太阳在椭圆的一个焦点上。
+\item
+（第二定律）行星与太阳的连线在相同时间扫过相同的面积。
+\item
+（第三定律）行星椭圆轨道半长轴$a$的三次方和周期$T$的平方成正比。
+\end{enumerate}
+\item
+初学第一次不用理解椭圆、焦点这些概念，这也不是考试重点。圆是椭圆的退化情况，此时椭圆的焦点退化为圆心；半长轴退化为半径。
+\item
+太阳质量$M_\odot = 2.0\times 10^{30}\unit{kg}$，如何从天文观测数据上得到？怎么得到地球的质量？
+\end{itemize}
+\begin{eg}
+地球和太阳的平均距离$r_\oplus$常记做一个天文单位$r_\oplus = 1\unit{AU}$。若某一个太阳系行星到太阳的距离是$a\unit{AU}$，其周期是多少年？
+\end{eg}
+\begin{ans}
+根据开普勒第三定律，有
+\vspace{3cm}
+\end{ans}
+\begin{eg}
+绕地球以半径为$r$的圆轨道运行的卫星的速度为多大？卫星越贴近地球表面，卫星的速度是增大还是减小？卫星的最大可能速度称为第一宇宙速度$v_1$，求第一宇宙速度的表达式，分别用$G,M,R$和$g,R$表示。
+\end{eg}
+\begin{ans}
+由牛顿第二定律，万有引力提供向心加速度，有
+\vspace{6cm}
+\end{ans}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
