@@ -192,8 +192,23 @@ x = \frac{1}{2}at^2 + v_0 t
 \vspace{6cm}
 \end{ans}
 
-\emph{老师好无聊，为什么非要用$v-t$图这种东西研究？}\par
+\emph{老师好无聊，为什么非要用$v-t$图这种东西研究？}
+\begin{itemize}
+\item
 可视：容易建立清晰的物理图像。在力学大题中一般涉及多个过程\so $v-t$图可以更方便地研究相对运动趋势；判断摩擦力方向等，因此最好从最基本的物理开始就熟悉运用$v-t$图这种工具！
+\end{itemize}
+\begin{eg}
+用$v-t$图证明对匀加速直线运动有
+\beq
+\bar v_{(t_1,t_2)} = \frac{v(t_2) + v(t_1)}{2} = v(\frac{t_1 + t_2}{2})
+\eeq
+指明上式每个表达式对应的$v-t$图几何元素，说出上式的几何原理和物理意义。
+\end{eg}
+\begin{ans}
+（回想一下梯形中位线的几何性质...）
+\vspace{4cm}
+\end{ans}
+
 \subsection{追击问题}
 \begin{itemize}
 \item
@@ -217,7 +232,7 @@ x_2 = 20t + 100
 \beq
 s = x_2 - x_1 = -t^2 + 20t + 100
 \eeq
-根据数学中的二次函数知识，当$t = \frac{20}{2}\unit s = 10 \unit s$时，$s$有最大值$-10^2 + 200 + 100 = 200({\rm m})$，小于240 m。此后警车开始靠近违法车辆，故可以追上。
+根据数学中的二次函数知识，当$t = \frac{20}{2}\unit s = 10 \unit s$时，$s$有最大值$-10^2 + 200 + 100 = 200({\rm m})$，小于$240\unit m$。此后警车开始靠近违法车辆，故可以追上。
 \end{ans}
 \subsection{其他习题}
 \begin{itemize}
@@ -235,6 +250,29 @@ s = x_2 - x_1 = -t^2 + 20t + 100
 \\
 假设相等的时间是$T$，则加速度为$a = $\hspace{1cm}，且$B$点速度为$v_B = $\hspace{1cm}，最后在$v-t$图上补完所有可以推得的物理量求得$OA=$\hspace{3cm}。
 \end{ans}
+\begin{itemize}
+\item
+$v-t$图同样可以很方便地解决比例问题。
+\item
+不要去刻意记忆那些奇奇怪怪的比例式！
+\item
+初中几何：相似三角形，$\text{面积比} = \text{边长比}^2$。
+\end{itemize}
+\begin{eg}
+求下列比例问题：
+\begin{enumerate}
+\item
+从$t=0$时刻从原点开始做自由落体的质点，以$y_n$表示质点在$t=n\unit s$时的位置；$s_n = y_{n+1} - y_n$表示质点第$n$秒内的位移。求$y_1 :y_2 :\dots :y_n$和$s_1:s_2:\dots :s_n$；
+\item
+如\cref{train}，一列有$N$节车厢的火车从站台静止开始匀加速开出，一个无聊的人站在火车头旁的站台处看火车，火车开动的时间为$t=0$。若他看到火车头完全离开他的时间为$T$，则整列火车完全离开他的时间$t_N$是多少？
+\end{enumerate}
+\end{eg}
+\cpicn{0.6}{train}{看！火车}
+\begin{ans}
+从静止开始的匀加速直线运动$v-t$图过原点，所以...
+\vspace{5cm}
+\end{ans}
+
 
 
 
@@ -955,7 +993,7 @@ F = G \frac{m_1 m_2}{r^2}
 \item
 为什么是$m_1m_2$？ \so 牛顿第三定律的要求。
 \item
-为什么正比于$\frac{1}{r^2}$？ \so 类比于一个灯泡在$r$距离的亮度（单位面积上的功率），如\cref{revsqr}。 \so 事实上因为我们生活在3维空间，所以电场力也是$\frac{1}{r^2}$的。
+为什么正比于$\frac{1}{r^2}$？ \so 类比于一个灯泡在$r$距离的亮度（单位面积上的功率），如\cref{revsqr}。 \so 很大程度上因为我们生活在3维空间，所以电场力也是$\frac{1}{r^2}$的。
 \cpicn{0.6}{revsqr}{为什么是平方反比}
 \end{itemize}
 \begin{eg}
@@ -1014,8 +1052,50 @@ F = G \frac{m_1 m_2}{r^2}
 \vspace{6cm}
 \end{ans}
 
-
-
+\subsection{椭圆轨道}
+\emph{什么是椭圆？}
+\begin{itemize}
+\item
+椭圆的数学定义：平面内到给定两点$F_1,F_2$距离之和为定值$2a$的所有点的集合，
+\item
+其他几何特征，如\cref{epl}：
+\begin{itemize}
+\item
+焦点：$F_1,F_2$是椭圆的\info{两个}焦点。线段$F_1F_2$的中点$O$是椭圆中心。\info{焦距}$c$是$F_1 F_2$长的一半。
+\item
+长轴：$F_1F_2$所在的弦，是椭圆中最长的那条弦，长度为$2a$。\so 半长轴为长轴的一半，长度为$a$。
+\item
+短轴：线段$F_1F_2$的中垂线对应的弦，长度为$2b$。\so 半短轴为短轴的一半，长度为$b$。
+\item
+离心率：椭圆的离心率定义为$e = \frac{c}{a}$。\so 按定义$0<e<1$，$e=0$的椭圆就是圆。
+\end{itemize}
+\end{itemize}
+\cpicn{0.6}{epl}{椭圆}
+\emph{地球是冬天离太阳远还是夏天离太阳远？}
+\begin{itemize}
+\item
+行星轨道是椭圆 \so 存在近日点和远日点，如\cref{eorbit}。
+\item
+根据开普勒第二定律，行星在近日点运行更快。这一点也可以用机械能守恒理解。
+\end{itemize}
+\cpicn{0.6}{eorbit}{椭圆轨道}
+\begin{eg}
+对如\cref{eorbit}的行星椭圆轨道，设其离心率为$e$，则行星在近日点$r_1$和远日点$r_2$的速度比是多少？判断大小关系：
+\begin{enumerate}
+\item
+$$m\frac{v_1^2}{r_1} \ \uline{\hspace{0.5cm}} \ \frac{GM_\odot m}{r_1^2}$$
+\item
+$$m\frac{v_2^2}{r_2}\  \uline{\hspace{0.5cm}}\  \frac{GM_\odot m}{r_2^2}$$
+\end{enumerate}
+\end{eg}
+\begin{ans}
+根据开普勒第二定律，对于一个很小的时间$\Delta t$，行星在近日点划过的面积为$\frac{1}{2}r_1 (v_1 \Delta t)$，在远日点划过的面积为$\frac{1}{2}r_2 (v_2 \Delta t)$。这两个面积应该相等，于是有
+\beq
+\frac{v_1}{v_2} = \frac{r_2}{r_1} = \frac{a+c}{a-c} = \frac{1+e}{1-e} >1
+\eeq
+\par
+在远日点，行星开始靠近太阳运动，说明万有引力提供的加速度大于该点做匀速圆周运动对应的向心加速度。
+\end{ans}
 
 
 
